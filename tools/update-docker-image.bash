@@ -23,6 +23,7 @@ sed \
    -e s/"ENV[[:space:]]NEWRELIC_SHA/ENV NEWRELIC_SHA ${sha}"/ \
     ../Dockerfile-template > Dockerfile
 
-git checkout -b $version_short
-git add .
-git commit -m "version bump to ${version_short}"
+# GHA: commenting out to test the more dynamic action option
+# git checkout -b $version_short
+# git add .
+# git commit -m "version bump to ${version_short}"
