@@ -28,6 +28,9 @@ git config user.email "kshade@newrelic.com"
 git config user.name "Kenton Shade"
 
 git checkout -b "${version_short}"
+# GHA: Below is only for testing
+# to catch the test txt file
+cd ../
 # GHA: Below includes deletions
 git add -A .
 git commit -m "version bump to ${version_short}"
