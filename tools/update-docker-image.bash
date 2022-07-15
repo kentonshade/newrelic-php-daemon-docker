@@ -28,5 +28,6 @@ git config user.email "kshade@newrelic.com"
 git config user.name "Kenton Shade"
 
 git checkout -b "${version_short}"
-git add .
+# GHA: Below includes deletions
+git add -A .
 git commit -m "version bump to ${version_short}"
