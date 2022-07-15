@@ -23,6 +23,10 @@ sed \
    -e s/"ENV[[:space:]]NEWRELIC_SHA/ENV NEWRELIC_SHA ${sha}"/ \
     ../Dockerfile-template > Dockerfile
 
+# GHA git configs (Change for prod)
+git config user.email "kshade@newrelic.com"
+git config user.name "Kenton Shade"
+
 git checkout -b "${version_short}"
 git add .
 git commit -m "version bump to ${version_short}"
